@@ -1,0 +1,23 @@
+{
+  "name": "mock-api-template",
+  "version": "1.0.0",
+  "description": "Mock API service - Node 14 + Express + PostgreSQL (local)",
+  "main": "server.js",
+  "engines": {
+    "node": ">=14.0.0 <15.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
