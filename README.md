@@ -39,8 +39,8 @@
 ```json
 {
   "data": [
-    { "instansi_id_gol": 1487, "score": 73 },
-    { "instansi_id_gol": 1568, "score": 82 }
+    { "instansi_id_gol": 1487, "score": 73, "keterangan": "test 1" },
+    { "instansi_id_gol": 1568, "score": 82, "keterangan": "test 2" }
   ]
 }
 ```
@@ -48,15 +48,20 @@
 ### Contoh response sukses (200):
 ```json
 {
-  "data": [
-    { "instansi_id_gol": 1487, "score": 73 },
-    { "instansi_id_gol": 1568, "score": 82 }
-  ]
+   "success":true,
+   "data":{
+      "count":1,
+      "instansi_id_gol":
+         [
+            1437
+         ]
+   },
+   "message":"Success!"
 }
 ```
 
 ## Menyesuaikan dengan API Dev asli
 
-- Edit `routes/score.js` untuk mengubah field request/response supaya match dengan kontrak API Dev BCS/ebudget yang sebenarnya.
+- Edit `routes/score.js` untuk mengubah field request/response supaya match dengan kontrak API Dev yang sebenarnya.
 - Tambah file route baru di folder `routes/` untuk endpoint mock lainnya, lalu daftarkan di `server.js` (`app.use('/api', namaRoute)`).
 - Struktur error response bisa disesuaikan biar konsisten dengan format error API Dev (mis. kode error khusus).
